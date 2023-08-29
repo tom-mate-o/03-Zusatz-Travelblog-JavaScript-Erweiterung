@@ -12,6 +12,8 @@ padding: 0; margin: 0;
     --color5: #caf0f8;
     --color6: #fff2b4;
     --color7: #fdf061;
+    --a-color: black;
+    --nav-color: white;
 
 
 }
@@ -25,6 +27,27 @@ body{
     justify-content: center;
     align-items: center;
 
+}
+
+.dark-mode{
+    background-image: linear-gradient(to right top, #002336, #002b3d, #003344, #003949, #005263);
+    --background-color: #282a36;
+    --h-color: darkgrey;
+    --color1: #6272a4;
+    --color2: rgb(11, 0, 51);
+    --color3: 	#f1fa8c;
+    --color4: #8be9fd;
+    --color5: blue;
+    --color6: #44475a;
+    --color7: red;
+    --a-color: white;
+    --nav-color: white;
+    --p-color: darkgrey;
+
+}
+
+.dark-mode img{
+    opacity: 0.5;
 }
 
 nav{
@@ -100,11 +123,11 @@ footer{
 
 a{
     text-decoration: none;
-    color: black;
+    color: var(--a-color);
 }
 nav a{
     text-decoration: none;
-    color: white;
+    color: var(--nav-color);
 }
 
 nav a:hover{
@@ -148,6 +171,7 @@ h3{
 
 p{
     font-family: 'Open Sans', sans-serif;
+    color: var(--p-color);
 }
 
 .logo{
@@ -269,4 +293,34 @@ p{
 
 .antwortHidden{
     display: none;
+}
+
+button{
+    border-style: none;
+    border-radius: 25px;
+    min-width: 125px;
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button.darkmode{
+    background-color: var(--color1);
+    color: var(--color6);
+}
+
+button.darkmode:hover{
+    background-color: black;
+}
+
+button.lightmode{
+    background-color: #fff2b4;
+    color: black;
+}
+
+button.lightmode:hover{
+    background-color: #fdf061;
 }
