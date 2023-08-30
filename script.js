@@ -22,17 +22,20 @@ document.querySelectorAll(".frage").forEach(function(frageElement) {
 document.getElementById("modeButton").addEventListener("click", function(){
     console.log("CLICK BUTTON");
 
-    var buttonKlasse = document.getElementById("modeButton");
+    var buttonElement = document.getElementById("modeButton");
 
-    buttonKlasse.classList.toggle("darkmode");
-    buttonKlasse.classList.toggle("lightmode");
+    buttonElement.classList.toggle("darkmode");
+    buttonElement.classList.toggle("lightmode");
 
-    if(buttonKlasse.classList.contains("darkmode")){
-        document.querySelector("span").innerHTML= '<i class="fa-solid fa-sun"></i> Light Mode';
-    } else if(buttonKlasse.classList.contains("lightmode")) {
-        document.querySelector("span").innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
+    var spanElement = buttonElement.querySelector("span");
+
+    if (buttonElement.classList.contains("darkmode")) {
+        spanElement.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
+    } else if (buttonElement.classList.contains("lightmode")) {
+        spanElement.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
     }
 });
+
 
 function modefunktion(){
     var element = document.body;
